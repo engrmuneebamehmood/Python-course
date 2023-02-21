@@ -1,12 +1,7 @@
-import qrcode
-qr = qrcode.QRCode(
-    version =1,
-    error_correction= qrcode.constants.ERROR_CORRECT_L,
-    box_size=10,
-    border=4,
-)
-data="Muneeba Mehmood"
-qr.add_data(data)
-qr.make(fit=True)
-img=qr.make_image(fill_color='black', back_color='white')
-img.save('qrcode.png')
+#text to speech
+import pyttsx3
+s=input("Enter any text to speak :")
+
+engine= pyttsx3.init()
+engine.say(s)
+engine.runAndWait()
